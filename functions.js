@@ -57,10 +57,25 @@ function populateDropdowns() {
             selectElements[i].appendChild(element);
         }
     }
-    console.log(selectElements);
 }
 
 function checkSchedule() {
-    console.log("clicked");
-    document.getElementById("list").textContent = req[1];
+    let selectedValues = [];
+    for (let i = 0; i < selectElements.length; i++) {
+        selectedValues.push(selectElements[i].value);
+    }
+
+    //check if each value of req array is in the selected values
+    let requirements = checkReqs(selectedValues);
+    console.log(requirements);
+}
+
+function checkReqs(values) {
+    for (let i = 0; i < req.length; i++) {
+        if (!values.includes(req[i])) {
+            console.log(req[i]);
+            return false
+        }
+    }
+    return true;
 }
