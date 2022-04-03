@@ -1,6 +1,6 @@
 // Schedule Requirements
-let req = ["free space", "hygiene (shower, etc)", "breakfast", "lunch", "dinner", "snack", "relaxation",
-    "exercise", "brain work", "chores", "social leisure", "personal leisure"];
+let req = ["hygiene (shower, etc)", "meal", "snack", "relaxation", "exercise", "brain work",
+    "chores", "social leisure", "personal leisure", "wake up", "bedtime"];
 let reqElements = [];
 
 document.getElementById("check").addEventListener("click", checkSchedule);
@@ -61,21 +61,83 @@ function populateDropdowns() {
 
 function checkSchedule() {
     let selectedValues = [];
+    let output = document.getElementById("feedback");
+
     for (let i = 0; i < selectElements.length; i++) {
         selectedValues.push(selectElements[i].value);
     }
 
     //check if each value of req array is in the selected values
     let requirements = checkReqs(selectedValues);
-    console.log(requirements);
+    output.textContent = requirements;
 }
 
 function checkReqs(values) {
     for (let i = 0; i < req.length; i++) {
-        if (!values.includes(req[i])) {
-            console.log(req[i]);
-            return false
+        let requirement = req[i];
+        let workingValues = values;
+        console.log(workingValues);
+
+        let index = workingValues.indexOf(requirement);
+        console.log(index);
+        if (index == -1) {
+            console.log(requirement + " not included");
+            return false;
         }
+        workingValues.splice(index, 1);
+        if (requirement == "snack" | requirement == "personal leisure") {
+            if (workingValues.includes(requirement)) {
+                console.log(requirement + " good :)");
+                return true;
+            }
+        }
+        if (requirement == "meal" | requirement == "relaxation" | requirement == "brain work") {
+            index = workingValues.indexOf(requirement);
+            console.log(index);
+            if (index == -1) {
+                console.log(requirement + " not included 2x");
+                return false;
+            }
+            workingValues.splice(index, 1);
+            index = workingValues.indexOf(requirement);
+            console.log(index);
+            if (index == -1) {
+                console.log(requirement + " not included 3x");
+                return false;
+            }
+            workingValues.splice(index, 1);
+            index = workingValues.indexOf(requirement);
+            console.log(index);
+            if (requirement == "brain work" && index == -1) {
+                console.log(requirement + " not included 4x");
+                return false;
+            }
+        }
+        console.log(requirement + " good :)");
+        
+        // if (requirement == "hygiene (shower, etc)" | requirement == "exercise" |
+        //     requirement == "chores" | requirement == "social leisure" |
+        //     requirement == "wake up" | requirement == "bedtime") {
+        //     if (!values.includes(requirement)) {
+        //         return false;
+        //     }
+        // }
+    //     if (requirement == "snack" | requirement == "personal leisure") {
+    //         let index = values.indexOf(requirement);
+    //         if (index == -1) {
+    //             return false;
+    //         }
+    //     }
+    //     if (requirement == "meal" | requirement == "relaxation") {
+    //         if (!values.includes(requirement)) {
+    //             return false;
+    //         }
+    //     }
+    //     if (requirement == "brain work") {
+    //         if (!values.includes(requirement)) {
+    //             return false;
+    //         }
+    //     }
     }
     return true;
 }
