@@ -1,0 +1,21 @@
+#home-page {
+    background-color: powderblue;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#title {
+    margin-top: 30px;
+}
+
+#schedule-builder {
+    border-style: solid;
+    padding: 30px;
+    border-radius: 20px;
+    font-size: large;
+    margin-bottom: 50px;
+}
+
+#check {
+    width: 100%;
+    margin-top: 20px;
+}

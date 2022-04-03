@@ -7,25 +7,60 @@
     <title>AP CSP Create Task</title>
     <link rel="stylesheet" href="main.css">
     <!-- Source: Bootstrap Stylesheet for the Grid System -->
-    <!-- All divs with class name row or col-md-# are part of the Bootstrap Grid System -->
+    <!-- All divs with class name container, row, or col-md-# are part of the Bootstrap Grid System -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
-<body>
+<body id="home-page">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Schedule</h1>
-                <h3>A healthy schedule builder!</h3>
+                <h1 id="title">My Weekend Schedule</h1>
+                <h4>
+                    A healthy schedule balances self-care, leisure, and productive time. 
+                    Self-care includes personal hygiene, getting enough sleeping, eating nutritious meals, 
+                    and getting exercise. Leisure time can include your hobbies, spending time with 
+                    friends or family, watching TV, or having some alone time. 
+                    Productive time includes working on chores, homework/work, or volunteer work. 
+                    Most people tend to spend most of their weekend in one of these three sections 
+                    instead of having a balance, which is why creating a schedule (and sticking to it!) 
+                    is very important.
+                </h4>
+                <h4>
+                    Keep these requirments for a healthy and balanced schedule in mind 
+                    as you create your own weekend schedule:
+                </h4>
+                <ul>
+                    <li>Sleep: get 8.5-9.5 hours of sleep per night.</li>
+                    <li>Wake up time: don't sleep in more than 1 hour on weekends.</li>
+                    <li>Daily personal hygiene: shower, change clothes, brush teeth twice, etc.</li>
+                    <li>Daily nutrition: three meals, two snacks, 2 liters of water</li>
+                    <li>Daily exercise: 30 min. of cardio</li>
+                    <li>Daily relaxation: 3 10-15 min. sessions of diaphragmatic breathing and relaxing muscles</li>
+                    <li>Daily brain work: 2 hours of homework, reading, etc.</li>
+                    <li>Daily chores: 3 chores</li>
+                    <li>Social leisure: 30+ min. with friends</li>
+                    <li>Personal leisure: 1 hour for hobbies, spending time with family, reading, watching TV, etc.</li>
+                </ul>
             </div>
         </div>
+    </div>
+    <div class="container" id="schedule-builder">
         <div class="row">
             <div class="col-md-3">
                 <p>6:00 a.m.</p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <select name="6" id="6" class="dropdowns">
-                    <option value="default">free space</option>
+                    <option value="default">Free Space</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <p>3:00 p.m.</p>
+            </div>
+            <div class="col-md-3">
+                <select name="3p" id="3p" class="dropdowns">
+                    <option value="default">Free Space</option>
                 </select>
             </div>
         </div>
@@ -33,9 +68,17 @@
             <div class="col-md-3">
                 <p>6:30 a.m.</p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <select name="630" id="630" class="dropdowns">
-                    <option value="default">free space</option>
+                    <option value="default">Free Space</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <p>3:30 p.m.</p>
+            </div>
+            <div class="col-md-3">
+                <select name="330p" id="330p" class="dropdowns">
+                    <option value="default">Free Space</option>
                 </select>
             </div>
         </div>
@@ -43,9 +86,17 @@
             <div class="col-md-3">
                 <p>7:00 a.m.</p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <select name="7" id="7" class="dropdowns">
-                    <option value="default">free space</option>
+                    <option value="default">Free Space</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <p>4:00 p.m.</p>
+            </div>
+            <div class="col-md-3">
+                <select name="4p" id="4p" class="dropdowns">
+                    <option value="default">Free Space</option>
                 </select>
             </div>
         </div>
@@ -53,9 +104,17 @@
             <div class="col-md-3">
                 <p>7:30 a.m.</p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <select name="730" id="730" class="dropdowns">
-                    <option value="default">free space</option>
+                    <option value="default">Free Space</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <p>4:30 p.m.</p>
+            </div>
+            <div class="col-md-3">
+                <select name="430p" id="430p" class="dropdowns">
+                    <option value="default">Free Space</option>
                 </select>
             </div>
         </div>
@@ -63,9 +122,17 @@
             <div class="col-md-3">
                 <p>8:00 a.m.</p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <select name="8" id="8" class="dropdowns">
-                    <option value="default">free space</option>
+                    <option value="default">Free Space</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <p>5:00 p.m.</p>
+            </div>
+            <div class="col-md-3">
+                <select name="5p" id="5p" class="dropdowns">
+                    <option value="default">Free Space</option>
                 </select>
             </div>
         </div>
@@ -73,9 +140,17 @@
             <div class="col-md-3">
                 <p>8:30 a.m.</p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <select name="830" id="830" class="dropdowns">
-                    <option value="default">free space</option>
+                    <option value="default">Free Space</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <p>5:30 p.m.</p>
+            </div>
+            <div class="col-md-3">
+                <select name="530p" id="530p" class="dropdowns">
+                    <option value="default">Free Space</option>
                 </select>
             </div>
         </div>
@@ -83,9 +158,17 @@
             <div class="col-md-3">
                 <p>9:00 a.m.</p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <select name="9" id="9" class="dropdowns">
-                    <option value="default">free space</option>
+                    <option value="default">Free Space</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <p>6:00 p.m.</p>
+            </div>
+            <div class="col-md-3">
+                <select name="6p" id="6p" class="dropdowns">
+                    <option value="default">Free Space</option>
                 </select>
             </div>
         </div>
@@ -93,9 +176,17 @@
             <div class="col-md-3">
                 <p>9:30 a.m.</p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <select name="930" id="930" class="dropdowns">
-                    <option value="default">free space</option>
+                    <option value="default">Free Space</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <p>6:30 p.m.</p>
+            </div>
+            <div class="col-md-3">
+                <select name="630p" id="630p" class="dropdowns">
+                    <option value="default">Free Space</option>
                 </select>
             </div>
         </div>
@@ -103,9 +194,17 @@
             <div class="col-md-3">
                 <p>10:00 a.m.</p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <select name="10" id="10" class="dropdowns">
-                    <option value="default">free space</option>
+                    <option value="default">Free Space</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <p>7:00 p.m.</p>
+            </div>
+            <div class="col-md-3">
+                <select name="7p" id="7p" class="dropdowns">
+                    <option value="default">Free Space</option>
                 </select>
             </div>
         </div>
@@ -113,9 +212,17 @@
             <div class="col-md-3">
                 <p>10:30 a.m.</p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <select name="1030" id="1030" class="dropdowns">
-                    <option value="default">free space</option>
+                    <option value="default">Free Space</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <p>7:30 p.m.</p>
+            </div>
+            <div class="col-md-3">
+                <select name="730p" id="730p" class="dropdowns">
+                    <option value="default">Free Space</option>
                 </select>
             </div>
         </div>
@@ -123,9 +230,17 @@
             <div class="col-md-3">
                 <p>11:00 a.m.</p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <select name="11" id="11" class="dropdowns">
-                    <option value="default">free space</option>
+                    <option value="default">Free Space</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <p>8:00 p.m.</p>
+            </div>
+            <div class="col-md-3">
+                <select name="8p" id="8p" class="dropdowns">
+                    <option value="default">Free Space</option>
                 </select>
             </div>
         </div>
@@ -133,9 +248,17 @@
             <div class="col-md-3">
                 <p>11:30 a.m.</p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <select name="1130" id="1130" class="dropdowns">
-                    <option value="default">free space</option>
+                    <option value="default">Free Space</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <p>8:30 p.m.</p>
+            </div>
+            <div class="col-md-3">
+                <select name="830p" id="830p" class="dropdowns">
+                    <option value="default">Free Space</option>
                 </select>
             </div>
         </div>
@@ -143,9 +266,17 @@
             <div class="col-md-3">
                 <p>12:00 p.m.</p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <select name="12p" id="12p" class="dropdowns">
-                    <option value="default">free space</option>
+                    <option value="default">Free Space</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <p>9:00 p.m.</p>
+            </div>
+            <div class="col-md-3">
+                <select name="9p" id="9p" class="dropdowns">
+                    <option value="default">Free Space</option>
                 </select>
             </div>
         </div>
@@ -153,9 +284,17 @@
             <div class="col-md-3">
                 <p>12:30 p.m.</p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <select name="1230p" id="1230p" class="dropdowns">
-                    <option value="default">free space</option>
+                    <option value="default">Free Space</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <p>9:30 p.m.</p>
+            </div>
+            <div class="col-md-3">
+                <select name="930p" id="930p" class="dropdowns">
+                    <option value="default">Free Space</option>
                 </select>
             </div>
         </div>
@@ -163,9 +302,17 @@
             <div class="col-md-3">
                 <p>1:00 p.m.</p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <select name="1p" id="1p" class="dropdowns">
-                    <option value="default">free space</option>
+                    <option value="default">Free Space</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <p>10:00 p.m.</p>
+            </div>
+            <div class="col-md-3">
+                <select name="10p" id="10p" class="dropdowns">
+                    <option value="default">Free Space</option>
                 </select>
             </div>
         </div>
@@ -173,9 +320,17 @@
             <div class="col-md-3">
                 <p>1:30 p.m.</p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <select name="130p" id="130p" class="dropdowns">
-                    <option value="default">free space</option>
+                    <option value="default">Free Space</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <p>10:30 p.m.</p>
+            </div>
+            <div class="col-md-3">
+                <select name="1030p" id="1030p" class="dropdowns">
+                    <option value="default">Free Space</option>
                 </select>
             </div>
         </div>
@@ -183,9 +338,17 @@
             <div class="col-md-3">
                 <p>2:00 p.m.</p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <select name="2p" id="2p" class="dropdowns">
-                    <option value="default">free space</option>
+                    <option value="default">Free Space</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <p>11:00 p.m.</p>
+            </div>
+            <div class="col-md-3">
+                <select name="11p" id="11p" class="dropdowns">
+                    <option value="default">Free Space</option>
                 </select>
             </div>
         </div>
@@ -193,199 +356,33 @@
             <div class="col-md-3">
                 <p>2:30 p.m.</p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <select name="230p" id="230p" class="dropdowns">
-                    <option value="default">free space</option>
+                    <option value="default">Free Space</option>
                 </select>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <p>3:00 p.m.</p>
-            </div>
-            <div class="col-md-9">
-                <select name="3p" id="3p" class="dropdowns">
-                    <option value="default">free space</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <p>3:30 p.m.</p>
-            </div>
-            <div class="col-md-9">
-                <select name="330p" id="330p" class="dropdowns">
-                    <option value="default">free space</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <p>4:00 p.m.</p>
-            </div>
-            <div class="col-md-9">
-                <select name="4p" id="4p" class="dropdowns">
-                    <option value="default">free space</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <p>4:30 p.m.</p>
-            </div>
-            <div class="col-md-9">
-                <select name="430p" id="430p" class="dropdowns">
-                    <option value="default">free space</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <p>5:00 p.m.</p>
-            </div>
-            <div class="col-md-9">
-                <select name="5p" id="5p" class="dropdowns">
-                    <option value="default">free space</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <p>5:30 p.m.</p>
-            </div>
-            <div class="col-md-9">
-                <select name="530p" id="530p" class="dropdowns">
-                    <option value="default">free space</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <p>6:00 p.m.</p>
-            </div>
-            <div class="col-md-9">
-                <select name="6p" id="6p" class="dropdowns">
-                    <option value="default">free space</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <p>6:30 p.m.</p>
-            </div>
-            <div class="col-md-9">
-                <select name="630p" id="630p" class="dropdowns">
-                    <option value="default">free space</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <p>7:00 p.m.</p>
-            </div>
-            <div class="col-md-9">
-                <select name="7p" id="7p" class="dropdowns">
-                    <option value="default">free space</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <p>7:30 p.m.</p>
-            </div>
-            <div class="col-md-9">
-                <select name="730p" id="730p" class="dropdowns">
-                    <option value="default">free space</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <p>8:00 p.m.</p>
-            </div>
-            <div class="col-md-9">
-                <select name="8p" id="8p" class="dropdowns">
-                    <option value="default">free space</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <p>8:30 p.m.</p>
-            </div>
-            <div class="col-md-9">
-                <select name="830p" id="830p" class="dropdowns">
-                    <option value="default">free space</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <p>9:00 p.m.</p>
-            </div>
-            <div class="col-md-9">
-                <select name="9p" id="9p" class="dropdowns">
-                    <option value="default">free space</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <p>9:30 p.m.</p>
-            </div>
-            <div class="col-md-9">
-                <select name="930p" id="930p" class="dropdowns">
-                    <option value="default">free space</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <p>10:00 p.m.</p>
-            </div>
-            <div class="col-md-9">
-                <select name="10p" id="10p" class="dropdowns">
-                    <option value="default">free space</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <p>10:30 p.m.</p>
-            </div>
-            <div class="col-md-9">
-                <select name="1030p" id="1030p" class="dropdowns">
-                    <option value="default">free space</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <p>11:00 p.m.</p>
-            </div>
-            <div class="col-md-9">
-                <select name="11p" id="11p" class="dropdowns">
-                    <option value="default">free space</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
             <div class="col-md-3">
                 <p>11:30 p.m.</p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <select name="1130p" id="1130p" class="dropdowns">
-                    <option value="default">free space</option>
+                    <option value="default">Free Space</option>
                 </select>
             </div>
         </div>
         <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <!-- Button Class Source: Bootstrap Buttons -->
+                <button type="button" class="btn btn-info" id="check">Check Schedule</button>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
             <div class="col-md-12">
-                <button id="check">Check Schedule</button>
                 <p id="feedback"></p>
             </div>
         </div>
-
     </div>
     <script src="functions.js" ></script>
 </body>
