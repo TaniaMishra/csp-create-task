@@ -69,21 +69,18 @@ function checkReqs(values) {
         if (requirement == "Meal" | requirement == "Relaxation" | requirement == "Brain Work") {
             // return false if meal, relaxation, or brain work is not included at least twice
             index = workingValues.indexOf(requirement);
-            console.log(index);
             if (index == -1) {
                 return false;
             }
             workingValues.splice(index, 1);
             // return false if meal, relaxation, or brain work is not included at least three times
             index = workingValues.indexOf(requirement);
-            console.log(index);
             if (index == -1) {
                 return false;
             }
             workingValues.splice(index, 1);
             // return false if brain work is not included at least four times
             index = workingValues.indexOf(requirement);
-            console.log(index);
             if (requirement == "Brain Work" && index == -1) {
                 return false;
             }
@@ -97,12 +94,12 @@ function checkBedtime(values) {
     let bedtimeIndex = values.indexOf("Bedtime");
 
     // return false if bedtime is at 11 or 11:30 pm
-    if (bedtimeIndex == values.length-2 | bedtimeIndex == values.length-1) {
+    if (bedtimeIndex == values.length-3 | bedtimeIndex == values.length-1) {
         return false;
     }
 
     // return false if relaxation is not scheduled right before bedtime
-    if (values[bedtimeIndex-1] != "Relaxation") {
+    if (values[bedtimeIndex-2] != "Relaxation") {
         return false;
     }
 
