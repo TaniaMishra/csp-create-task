@@ -60,8 +60,8 @@ function checkReqs(values) {
 
         // return true if snack & personal leisure are included at least twice
         if (requirement == "Snack" | requirement == "Personal Leisure") {
-            if (workingValues.includes(requirement)) {
-                return true;
+            if (!workingValues.includes(requirement)) {
+                return false;
             }
         }
 
