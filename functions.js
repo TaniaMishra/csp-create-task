@@ -36,12 +36,7 @@ function checkSchedule() {
         output.textContent = "Your schedule does not have all the requirements for a healthy and balanced weekened.";
     }
     else {
-        if (checkBedtime(selectedValues) == false) {
-            output.textContent = "Great job including everything you need! However, your bedtime routine needs work. Make sure to relax before bed and go to bed before 11 p.m.";
-        }
-        else {
-            output.textContent = "Great job creating a healthy and balanced schedule! Make sure to stick to it this weekend. You can print it here: ";
-        }
+        output.textContent = "Great job creating a healthy and balanced schedule! Make sure to stick to it this weekend.";
     }
 }
 
@@ -86,22 +81,5 @@ function checkReqs(values) {
             }
         }
     }
-    return true;
-}
-
-// check if the bedtime routine follows requirements
-function checkBedtime(values) {
-    let bedtimeIndex = values.indexOf("Bedtime");
-
-    // return false if bedtime is at 11 or 11:30 pm
-    if (bedtimeIndex == values.length-3 | bedtimeIndex == values.length-1) {
-        return false;
-    }
-
-    // return false if relaxation is not scheduled right before bedtime
-    if (values[bedtimeIndex-2] != "Relaxation") {
-        return false;
-    }
-
     return true;
 }
